@@ -1,8 +1,9 @@
 package com.example.springboot;
 
 import com.example.demo.DemoApplication;
-import com.example.demo.service.CalculateSercice;
+import com.example.demo.service.CalculateService;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -20,25 +21,26 @@ import java.util.stream.Stream;
  */
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = {DemoApplication.class})
+@SpringBootTest(classes = {DemoApplication.class},webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class SpringTest {
 
     @Autowired
-    private CalculateSercice calculateSercice;
+    private CalculateService calculateService;
 
+    @Disabled
     @Test
     public void testService(){
-        System.out.println("just for Test"+"              "+calculateSercice);
-        Assertions.assertTrue(calculateSercice != null);
-//        Assertions.assertEquals(calculateSercice.calcValue(a,b),assumValue);
+        System.out.println("just for Test"+"              "+ calculateService);
+        Assertions.assertTrue(calculateService != null);
+//        Assertions.assertEquals(calculateService.calcValue(a,b),assumValue);
     }
 
     @ParameterizedTest
     @MethodSource("stringIntAndListProvider")
     public void testService2(int a,int b,int c){
-        System.out.println("###################just for Test ###########"+"    "+calculateSercice);
-        Assertions.assertTrue(calculateSercice != null);
-        Assertions.assertEquals(calculateSercice.calcValue(a,b),c);
+        System.out.println("###################just for Test ###########"+"    "+ calculateService);
+        Assertions.assertTrue(calculateService != null);
+        Assertions.assertEquals(calculateService.calcValue(a,b),c);
     }
 
     static Stream<Arguments> stringIntAndListProvider() {

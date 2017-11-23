@@ -1,6 +1,6 @@
 package com.example.demo.web;
 
-import com.example.demo.service.CalculateSercice;
+import com.example.demo.service.CalculateService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 @RequestMapping("/demo")
 public class HelloWorldControll {
     @Resource
-    private CalculateSercice calculateSercice;
+    private CalculateService calculateSercice;
 
     @RequestMapping("/test")
     public  String getWords(){
