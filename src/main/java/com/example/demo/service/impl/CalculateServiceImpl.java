@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 public class CalculateServiceImpl implements CalculateService {
 
 
-
     @Override
     public int calcValue(int a, int b) {
         return a + b;

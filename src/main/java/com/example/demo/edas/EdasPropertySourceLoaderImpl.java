@@ -13,6 +13,7 @@ import java.io.IOException;
  * @author lw
  */
 public class EdasPropertySourceLoaderImpl implements PropertySourceLoader {
+
     private static Logger logger = LoggerFactory.getLogger(EdasPropertySourceLoaderImpl.class);
 
     private static final String TAO_BAO_HSF_PATH = "taobao-hsf.sar";
@@ -24,9 +25,9 @@ public class EdasPropertySourceLoaderImpl implements PropertySourceLoader {
         try {
             String path = EdasPropertySourceLoaderImpl.class.getResource("/").getPath();
             logger.info("加载当前的classpath的目录：{}",path);
-
+            //只有在测试的环节下才会加载库存
             if (path.contains("test-classes")){
-                logger.info("只要再测试的环节中，才会加载taobao-hsf的依赖文件");
+                logger.info("只有在测试的环节中，才会加载taobao-hsf的依赖文件");
                 String taobaoHsfPath = path + "//" +TAO_BAO_HSF_PATH;
                 factory = ServiceFactory.getInstanceWithPath(taobaoHsfPath);
                 logger.info("加载alibaba hsf的sar的依赖");
@@ -45,5 +46,13 @@ public class EdasPropertySourceLoaderImpl implements PropertySourceLoader {
     @Override
     public PropertySource<?> load(String name, Resource resource, String profile) throws IOException {
         return null;
+    }
+
+    /**
+     *   返回edas的factory
+     * @return
+     */
+    public static ServiceFactory getFactory() {
+        return factory;
     }
 }
