@@ -35,7 +35,7 @@ public class EdasTest {
 
         String path = EdasTest.class.getResource("/").getPath();
 
-        Assumptions.assumeTrue(path.endsWith("test-classed"));
+        Assumptions.assumeTrue(path.contains("test-classes"));
 
     }
 
