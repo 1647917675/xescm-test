@@ -2,6 +2,7 @@ package com.example.juit5.disabled;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -12,7 +13,9 @@ public class DisabledTest {
 
     @Test
     @Disabled
-    void  testDisabled(){
-        Assertions.fail("测试是否没有测试");
+    @DisplayName("just for test")
+     public void  testDisabled(){
+//        Assertions.fail("测试是否没有测试");
+        Assertions.assertTrue(true);
     }
 }
