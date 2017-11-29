@@ -7,6 +7,10 @@
         http://www.taobao.com/hsf/hsf.xsd"
        default-autowire="byName">
     <!-- csc 客户中心 -->
-    <hsf:consumer id="customerAutoComputeEdasService" interface="com.xescm.bc.ac.service.CustomerAutoComputeEdasService"  group="xescm-bc-${xescm.edas.group}" version="1.0"
-                  clientTimeout="60000"/>
-</beans>
+    <hsf:consumer
+            id="customerAutoComputeEdasService"
+            interface="com.xescm.bc.ac.service.CustomerAutoComputeEdasService"
+            group="xescm-bc-dev"
+            version="1.0"
+            clientTimeout="60000"/>
+        </beans>

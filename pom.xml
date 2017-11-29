@@ -53,6 +53,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>6.0.37</version>
@@ -225,12 +231,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
+
 
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -243,20 +244,20 @@
 			<groupId>com.alibaba.hsf</groupId>
 			<artifactId>LightApi</artifactId>
 			<version>1.0.0</version>
-			<scope>test</scope>
+			<!--<scope>test</scope>-->
 		</dependency>
 
+		<dependency>
+			<groupId>com.alibaba.edas</groupId>
+			<artifactId>edas-sdk</artifactId>
+			<version>1.6.1</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.xescm.api</groupId>
 			<artifactId>xescm-bc-api</artifactId>
 			<version>1.0</version>
 		</dependency>
-        <dependency>
-            <groupId>com.alibaba.hsf</groupId>
-            <artifactId>LightApi</artifactId>
-            <version>1.0.0</version>
-        </dependency>
 
     </dependencies>
 
@@ -291,11 +292,6 @@
 						<!--<configurationParameters>-->
 							<!--junit.jupiter.conditions.deactivate = *-->
 						<!--</configurationParameters>-->
-
-						<property>
-						<name>listener</name>
-						<value>com.example.springboot.MyListener</value>
-						</property>
 					</properties>
 				</configuration>
 				<dependencies>

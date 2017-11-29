@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.example.edas;
 
 import com.example.demo.DemoApplication;
 import com.example.demo.edas.EdasPropertySourceLoaderImpl;
@@ -31,6 +31,7 @@ public class EdasFactoryTest {
     @Test
     @DisplayName("test 是不是dev的环境")
     public void testSpring2() throws Exception {
+        System.out.println(env);
         Assertions.assertTrue(env.equalsIgnoreCase("dev"));
     }
 }
