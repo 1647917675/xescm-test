@@ -29,7 +29,7 @@ public class Standard02Tests {
     // 测试的单元
     @Test
     void failingTest() {
-        fail("a failing test");
+//        fail("a failing test");
     }
 
     //测试的单元

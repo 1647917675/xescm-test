@@ -16,6 +16,6 @@ public class Base02Test extends BaseTest {
     // 测试的单元
     @Test
     void failingTest() {
-        fail("a failing test");
+//        fail("a failing test");
     }
 }

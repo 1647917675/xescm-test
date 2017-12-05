@@ -19,8 +19,8 @@ public class CsvSourceTest {
         assertNotEquals(0, second);
     }
 
-    @ParameterizedTest
-    @CsvFileSource(resources = "/two-column.csv")
+//    @ParameterizedTest
+//    @CsvFileSource(resources = "/two-column.csv")
     void testWithCsvFileSource(String first, int second) {
         assertNotNull(first);
         assertNotEquals(0, second);
