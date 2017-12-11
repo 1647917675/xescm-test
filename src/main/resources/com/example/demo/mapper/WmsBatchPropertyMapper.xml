@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.WmsBatchPropertyMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.domain.BatchPropertyDTO">
+    <result column="batch_id" property="batchId" jdbcType="VARCHAR" />
+    <result column="batch_desc" property="batchDesc" jdbcType="VARCHAR" />
+    <result column="customer_code" property="customerCode" jdbcType="VARCHAR" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" />
+    <result column="warehouse_code" property="warehouseCode" jdbcType="VARCHAR" />
+    <result column="warehouse_name" property="warehouseName" jdbcType="VARCHAR" />
+    <result column="batch_born_time" property="batchBornTime" jdbcType="INTEGER" />
+    <result column="batch_unvalid_time" property="batchUnvalidTime" jdbcType="INTEGER" />
+    <result column="batch_born_number" property="batchBornNumber" jdbcType="VARCHAR" />
+    <result column="batch_supplier" property="batchSupplier" jdbcType="INTEGER" />
+    <result column="batch_number" property="batchNumber" jdbcType="INTEGER" />
+    <result column="batch_sku_gooding" property="batchSkuGooding" jdbcType="INTEGER" />
+    <result column="creator" property="creator" jdbcType="VARCHAR" />
+    <result column="creator_name" property="creatorName" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="DATE" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="operator_name" property="operatorName" jdbcType="VARCHAR" />
+    <result column="operate_time" property="operateTime" jdbcType="DATE" />
+    <result column="wms_test" property="wmsTest" jdbcType="INTEGER" />
+    <result column="batch_status" property="batchStatus" jdbcType="INTEGER" />
+  </resultMap>
+
+
+  <insert id="insertBatchProperty" parameterType="com.example.demo.domain.BatchPropertyDTO" >
+    REPLACE into tb_wms_batch_property (batch_id,batch_desc,customer_code,customer_name,warehouse_code,warehouse_name,
+    batch_born_time,batch_unvalid_time,batch_born_number,batch_supplier,batch_number,batch_sku_gooding,creator,creator_name,create_time,operator,operator_name,operate_time,wms_test,batch_status)
+    values (
+    #{batchId,jdbcType=VARCHAR},
+    #{batchDesc,jdbcType=VARCHAR},
+    #{customerCode,jdbcType=VARCHAR},
+    #{customerName,jdbcType=VARCHAR},
+    #{warehouseCode,jdbcType=VARCHAR},
+    #{warehouseName,jdbcType=VARCHAR},
+    #{batchBornTime,jdbcType=INTEGER},
+    #{batchUnvalidTime,jdbcType=INTEGER},
+    #{batchBornNumber,jdbcType=INTEGER},
+    #{batchSupplier,jdbcType=INTEGER},
+    #{batchNumber,jdbcType=INTEGER},
+    #{batchSkuGooding,jdbcType=INTEGER},
+    #{creator,jdbcType=VARCHAR},
+    #{creatorName,jdbcType=VARCHAR},
+    #{createTime,jdbcType=DATE},
+    #{operator,jdbcType=VARCHAR},
+    #{operatorName,jdbcType=VARCHAR},
+    #{operateTime,jdbcType=DATE},
+    #{wms_test,jdbcType=INTEGER},
+    #{batchStatus,jdbcType=INTEGER}
+    )
+  </insert>
+
+
+</mapper>

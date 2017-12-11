@@ -21,13 +21,13 @@ import static org.junit.platform.commons.util.AnnotationUtils.findAnnotation;
  * @date 2017/12/5
  * @since 1.0.0
  */
-public class XescmSprngExtension extends SpringExtension implements ExecutionCondition {
+public class XescmSpringExtension extends SpringExtension implements ExecutionCondition {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     private static final String ENV = "env";
     private static final String ENV_DEV_VALUE = "dev";
     private static final ConditionEvaluationResult ENABLED = ConditionEvaluationResult.enabled(
-            "@edas 持续集成的");
+            "@edas持续集成的");
 
     @Override
     public ConditionEvaluationResult evaluateExecutionCondition(ExtensionContext context) {
