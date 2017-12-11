@@ -47,6 +47,12 @@
 			<scope>test</scope>
 		</dependency>
 
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- Spring Boot JDBC -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -68,13 +74,6 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
-		</dependency>
-
-		<!-- mysql jar -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 
 		<!-- mybatis jar -->
@@ -231,8 +230,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
-
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>hsf.schema</artifactId>
@@ -246,17 +243,22 @@
 			<version>1.0.0</version>
 			<!--<scope>test</scope>-->
 		</dependency>
-
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.13</version>
+		</dependency>
 		<dependency>
 			<groupId>com.alibaba.edas</groupId>
 			<artifactId>edas-sdk</artifactId>
 			<version>1.6.1</version>
 		</dependency>
 
+		<!-- 分页工具 jar -->
 		<dependency>
-			<groupId>com.xescm.api</groupId>
-			<artifactId>xescm-bc-api</artifactId>
-			<version>1.0</version>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.1.0</version>
 		</dependency>
 
     </dependencies>
